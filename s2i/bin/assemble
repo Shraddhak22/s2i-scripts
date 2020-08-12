@@ -8,3 +8,10 @@ fi
 # move the application source
 mv /tmp/s2i/src $HOME/src
 
+# build application artifacts
+pushd ${HOME}
+make all
+
+# install the artifacts
+make install
+popd
