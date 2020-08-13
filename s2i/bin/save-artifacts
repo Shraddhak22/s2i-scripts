@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Besides the tar command, all other output to standard out must 
-# be surpressed.  Otherwise, the tar stream will be corrupted.
-pushd ${HOME} >/dev/null
-if [ -d deps ]; then
-    # all deps contents to tar stream
-    tar cf - deps
+if [ -d "${HOME}/node_modules" ] && [ "$(ls "${HOME}/node_modules" 2>/dev/null)" ]; then
+    tar -C "${HOME}" -cf - node_modules
 fi
-popd >/dev/null
