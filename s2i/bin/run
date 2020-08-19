@@ -1,6 +1,6 @@
 
 #!/bin/bash
-echo "Running custom run script."
+echo "----------------------------------->Running custom run script."
 # S2I run script for the 'nodejs' image.
 # The run script executes the server that runs your application.
 #
